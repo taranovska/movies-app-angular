@@ -1,13 +1,16 @@
-<a class="item">
-  <div class="item-rating">
-    <span class="material-symbols-outlined">star</span>
-    <span>7</span>/10
-  </div>
-  <div class="item-image">
-    <img
-      src="https://images.pexels.com/photos/598917/pexels-photo-598917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      alt="Movie poster"
-    />
-  </div>
-  <div class="item-title">Title</div>
-</a>
+<ng-container *ngIf="itemData"
+  ><a class="item">
+    <div class="item-rating">
+      <span class="material-symbols-outlined">star</span>
+      <span>{{ itemData.vote_average }}</span
+      >/10
+    </div>
+    <div class="item-image">
+      <img
+        [src]="imagesSizes.medium + itemData.poster_path"
+        [alt]="itemData.title"
+      />
+    </div>
+    <div class="item-title">{{ itemData.title }}</div>
+  </a></ng-container
+>
