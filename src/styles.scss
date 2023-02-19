@@ -22,3 +22,11 @@ a {
   margin-bottom: 0;
   padding: 0.5rem;
 }
+
+.p-tabview-nav {
+  justify-content: center;
+
+  li .p-tabview-nav-link {
+    background: $bdColor;
+  }
+}

@@ -24,6 +24,7 @@ import {
 export class SliderComponent implements OnInit {
   @Input()
   items: Movie[] = [];
+  @Input() isBanner: boolean = false;
 
   currentSliderIndex: number = 0;
 
@@ -32,8 +33,9 @@ export class SliderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    setInterval(() => {
-      this.currentSliderIndex = ++this.currentSliderIndex % this.items.length;
-    }, 5000);
+    !this.isBanner &&
+      setInterval(() => {
+        this.currentSliderIndex = ++this.currentSliderIndex % this.items.length;
+      }, 5000);
   }
 }
