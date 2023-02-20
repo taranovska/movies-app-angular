@@ -17,6 +17,8 @@ import { MovieComponent } from './pages/movie/movie.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { ImageModule } from 'primeng/image';
 import { CarouselModule } from 'primeng/carousel';
+import { GenresComponent } from './pages/genres/genres.component';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { CarouselModule } from 'primeng/carousel';
     MovieItemComponent,
     MovieComponent,
     VideosComponent,
+    GenresComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { CarouselModule } from 'primeng/carousel';
     TabViewModule,
     ImageModule,
     CarouselModule,
+    InputTextModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

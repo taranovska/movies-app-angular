@@ -85,7 +85,7 @@
         <img
           [src]="imagesSizes.medium + actor.profile_path"
           [alt]="actor.name"
-          *ngIf="actor.profile_path"
+          *ngIf="actor.profile_path || actor.profile_path !== null"
         />
         <div class="actor-name">{{ actor.name }}</div>
         <div class="actor-character">{{ actor.character }}</div>

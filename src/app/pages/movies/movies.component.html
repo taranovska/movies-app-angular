@@ -1,14 +1,32 @@
 <div class="container">
   <div class="grid">
-    <div class="col-6 md:col-4 lg:col-4" *ngFor="let movie of movies">
-      <app-movie-item [itemData]="movie"></app-movie-item>
+    <div class="col-12">
+      <div class="col-12">
+        <div class="p-fluid">
+          <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input
+              type="text"
+              pInputText
+              placeholder="Search"
+              [(ngModel)]="searchValue"
+              (change)="searchMovies()"
+            />
+          </span>
+        </div>
+      </div>
     </div>
-  </div>
-  <div>
-    <p-paginator
-      [rows]="20"
-      [totalRecords]="10000"
-      (onPageChange)="paginate($event)"
-    ></p-paginator>
+    <div class="grid">
+      <div class="col-6 md:col-4 lg:col-4" *ngFor="let movie of movies">
+        <app-movie-item [itemData]="movie"></app-movie-item>
+      </div>
+    </div>
+    <div>
+      <p-paginator
+        [rows]="20"
+        [totalRecords]="10000"
+        (onPageChange)="paginate($event)"
+      ></p-paginator>
+    </div>
   </div>
 </div>
